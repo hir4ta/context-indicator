@@ -26,18 +26,18 @@ interface StatuslineInput {
   transcript_path?: string;
 }
 
-// 256-color ANSI escape codes for modern gradient
+// 24-bit true color ANSI escape codes for smooth gradient
 function getColor(percentage: number): string {
-  if (percentage < 10) return "\x1b[38;5;51m";   // Cyan
-  if (percentage < 20) return "\x1b[38;5;50m";   // Teal
-  if (percentage < 30) return "\x1b[38;5;49m";   // Mint
-  if (percentage < 40) return "\x1b[38;5;48m";   // Green
-  if (percentage < 50) return "\x1b[38;5;84m";   // Light green
-  if (percentage < 60) return "\x1b[38;5;135m";  // Purple
-  if (percentage < 70) return "\x1b[38;5;141m";  // Lavender
-  if (percentage < 80) return "\x1b[38;5;220m";  // Yellow
-  if (percentage < 90) return "\x1b[38;5;208m";  // Orange
-  return "\x1b[38;5;196m";                        // Red
+  if (percentage < 10) return "\x1b[38;2;100;149;237m";  // Cornflower Blue
+  if (percentage < 20) return "\x1b[38;2;72;166;215m";   // Sky Blue
+  if (percentage < 30) return "\x1b[38;2;64;189;186m";   // Teal
+  if (percentage < 40) return "\x1b[38;2;72;201;150m";   // Sea Green
+  if (percentage < 50) return "\x1b[38;2;134;199;116m";  // Soft Green
+  if (percentage < 60) return "\x1b[38;2;185;195;100m";  // Yellow Green
+  if (percentage < 70) return "\x1b[38;2;230;190;90m";   // Gold
+  if (percentage < 80) return "\x1b[38;2;235;150;80m";   // Soft Orange
+  if (percentage < 90) return "\x1b[38;2;230;110;80m";   // Coral
+  return "\x1b[38;2;215;85;85m";                          // Soft Red
 }
 
 function createProgressBar(percentage: number, width: number = 10): string {

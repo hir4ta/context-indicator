@@ -1,37 +1,37 @@
 # Claude Code Context Indicator
 
-Claude Code のステータスラインにコンテキスト使用率をリアルタイム表示するツール
+A tool that displays real-time context usage in Claude Code's status line.
 
-## インストール
+## Installation
 
 ```bash
 npm install -g claude-code-context-indicator
 ```
 
-## セットアップ
+## Setup
 
 ```bash
 context-indicator --setup
 ```
 
-その後、Claude Code を再起動してください。
+Then restart Claude Code.
 
-## 機能
+## Features
 
-- **プログレスバー表示**: 視覚的にコンテキスト使用率を把握
-- **10段階グラデーション**: 使用率に応じて段階表示
-  - 0-10%: Cyan
-  - 10-20%: Teal
-  - 20-30%: Mint
-  - 30-40%: Green
-  - 40-50%: Light Green
-  - 50-60%: Purple
-  - 60-70%: Lavender
-  - 70-80%: Yellow
-  - 80-90%: Orange
-  - 90-100%: Red
+- **Progress bar display**: Visually track context usage
+- **10-level gradient**: Smooth color transition from cool to warm
+  - 0-10%: Cornflower Blue
+  - 10-20%: Sky Blue
+  - 20-30%: Teal
+  - 30-40%: Sea Green
+  - 40-50%: Soft Green
+  - 50-60%: Yellow Green
+  - 60-70%: Gold
+  - 70-80%: Soft Orange
+  - 80-90%: Coral
+  - 90-100%: Soft Red
 
-## 表示例
+## Display Example
 
 ```text
 Context Used: ░░░░░░░░░░ 0.0%
@@ -41,10 +41,10 @@ Context Used: ████████░░ 75.0%
 Context Used: ██████████ 95.0%
 ```
 
-## 仕組み
+## How It Works
 
-Claude Code は 200K トークンのコンテキストウィンドウを持ちますが、auto-compact 機能により約 45K トークンがバッファとして予約されています。このツールは実効的な使用可能領域 (155K トークン) を基準にパーセンテージを計算します。
+Claude Code has a 200K token context window, but the auto-compact feature reserves approximately 45K tokens as a buffer. This tool calculates the percentage based on the effective usable area (155K tokens).
 
-## ライセンス
+## License
 
 MIT

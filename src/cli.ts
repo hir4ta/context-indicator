@@ -1,11 +1,5 @@
 #!/usr/bin/env node
 
-/**
- * Claude Code Context Indicator - CLI
- *
- * Setup command to install statusline configuration for Claude Code.
- */
-
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
@@ -24,7 +18,6 @@ interface Settings {
 function setup(): void {
   console.log("Claude Code Context Indicator Setup\n");
 
-  // Create ~/.claude directory if needed
   if (!fs.existsSync(CLAUDE_DIR)) {
     fs.mkdirSync(CLAUDE_DIR, { recursive: true });
     console.log(`Created: ${CLAUDE_DIR}`);
@@ -37,7 +30,9 @@ function setup(): void {
     try {
       settings = JSON.parse(fs.readFileSync(SETTINGS_PATH, "utf-8"));
     } catch {
-      console.log("Warning: Could not parse existing settings.json, creating new one");
+      console.log(
+        "Warning: Could not parse existing settings.json, creating new one"
+      );
     }
   }
 
