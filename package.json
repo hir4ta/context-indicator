@@ -1,0 +1,40 @@
+{
+  "name": "claude-code-context-indicator",
+  "version": "0.1.0",
+  "description": "Context usage indicator for Claude Code status line - shows real-time token usage percentage",
+  "type": "module",
+  "bin": {
+    "context-indicator": "dist/cli.js",
+    "context-indicator-statusline": "dist/statusline.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bun build src/cli.ts --outfile dist/cli.js --target node && bun build src/statusline.ts --outfile dist/statusline.js --target node",
+    "prepublishOnly": "bun run build"
+  },
+  "keywords": [
+    "claude-code",
+    "claude",
+    "statusline",
+    "status-line",
+    "context",
+    "token",
+    "indicator",
+    "cli"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "*"
+  }
+}
