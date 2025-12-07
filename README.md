@@ -2,6 +2,18 @@
 
 A tool that displays real-time context usage in Claude Code's status line.
 
+**Zero dependencies** - lightweight and secure.
+
+## Why Use This?
+
+When using Claude Code, the context window fills up as the conversation progresses. Once it reaches the limit, auto-compact kicks in and the conversation history is summarized - which means you lose detailed context.
+
+This tool lets you visually monitor context usage in real-time, so you can:
+
+- Know when to wrap up a task before auto-compact
+- Save checkpoints at the right time
+- Maintain better control over long coding sessions
+
 ## Installation
 
 ```bash
@@ -16,30 +28,24 @@ context-indicator --setup
 
 Then restart Claude Code.
 
-## Features
-
-- **Progress bar display**: Visually track context usage
-- **10-level gradient**: Smooth color transition from cool to warm
-  - 0-10%: Cornflower Blue
-  - 10-20%: Sky Blue
-  - 20-30%: Teal
-  - 30-40%: Sea Green
-  - 40-50%: Soft Green
-  - 50-60%: Yellow Green
-  - 60-70%: Gold
-  - 70-80%: Soft Orange
-  - 80-90%: Coral
-  - 90-100%: Soft Red
-
 ## Display Example
 
 ```text
-Context Used: ░░░░░░░░░░ 0.0%
-Context Used: ███░░░░░░░ 31.0%
-Context Used: ██████░░░░ 55.0%
-Context Used: ████████░░ 75.0%
-Context Used: ██████████ 95.0%
+Context: ░░░░░░░░░░ 0.0%
+Context: ███░░░░░░░ 31.0%
+Context: ██████░░░░ 55.0%
+Context: ████████░░ 75.0%
+Context: ██████████ 95.0%
 ```
+
+The progress bar color gradually shifts from blue → green → yellow → red as usage increases.
+
+## Features
+
+- **Real-time progress bar**: Visually track context usage at a glance
+- **10-level color gradient**: Intuitive color transition from cool to warm
+- **Zero dependencies**: No additional packages installed - minimal security risk
+- **Simple setup**: One command to configure
 
 ## How It Works
 
