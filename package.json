@@ -1,6 +1,6 @@
 {
   "name": "claude-code-context-indicator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Context usage indicator for Claude Code status line - shows real-time token usage percentage",
   "type": "module",
   "bin": {
